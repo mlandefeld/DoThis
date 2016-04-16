@@ -26,4 +26,13 @@
 
 Route::group(['middleware' => ['web']], function () {
     Route::get('/', ['as' => 'home', 'uses' => 'TaskController@index'] );
+
+    Route::group(['prefix' => 'tasks'], function () {
+        Route::get('/', ['as' => 'tasks.index', 'uses' => 'TaskController@index'] );
+        Route::get('create', ['as' => 'task.create', 'uses' => 'TaskController@create']);
+        Route::post('store', ['as' => 'task.store', 'uses' => 'TaskController@store']);
+        Route::get('{id}/edit', ['as' => 'task.edit', 'uses' => 'TaskController@edit']);
+        Route::post('{id}/update', ['as' => 'task.update', 'uses' => 'TaskController@update']);
+    });
 });
+

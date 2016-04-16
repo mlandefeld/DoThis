@@ -8596,4 +8596,25 @@ button.picker__today:focus, button.picker__clear:focus, button.picker__close:foc
   .picker--time .picker__box {
     margin-bottom: 5em; } }
 
+section {
+  padding-top: 50px; }
+  section:last-child {
+    padding-bottom: 50px; }
+
+input {
+  border: 2px solid #777777; }
+
+.checkbox-inline label {
+  width: 100%; }
+
+.checkbox-inline .actions {
+  opacity: 0;
+  transition: opacity 0.1s; }
+
+.checkbox-inline:hover .actions {
+  opacity: 0.7; }
+
+p {
+  color: #777777; }
+
 /*# sourceMappingURL=app.css.map */

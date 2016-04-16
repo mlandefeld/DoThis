@@ -11,7 +11,9 @@
     </head>
     <body>
         @include('templates.html.navbar')
-        @yield('content')
+        <div class="container">
+            @yield('content')
+        </div>
         <script src="/js/app.js"></script>
     </body>
 </html>
